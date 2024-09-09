@@ -8,7 +8,8 @@
  - CSS;
  - BEM;
  - JavaScript;
- - React. 
+ - React;
+ - JSX.
 
 ![alt text for screen readers](src/screen.jpg "Homepage")
 
