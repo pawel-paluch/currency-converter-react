@@ -30,6 +30,7 @@ export const Form = ({ calculateResult, result }) => {
                         type="number"
                         required
                         step="0.01"
+                        min="0.01"
                     />
                 </label>
             </p>
