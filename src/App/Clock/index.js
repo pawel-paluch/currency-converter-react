@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
 
-const formDate = (date) => {
+const formatDate = (date) => {
     const day = date.getDate();
     const month = date.toLocaleString(undefined, { month: "long" });
     const weekday = date.toLocaleString(undefined, { weekday: "long" });
     const year = date.getFullYear();
+    const time = date.toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit", second: "2-digit" });
 
-    return `Dzisiaj jest ${day} ${month} · ${weekday} · roku pańskiego ${year}`;
+    return `Dzisiaj jest ${weekday},  ${day} ${month} ${year}, godzina ${time}`;
 };
 
 export const Clock = () => {
@@ -24,8 +25,7 @@ export const Clock = () => {
 
     return (
         <div className="clock">
-            
-            {formDate(date)}
+            {formatDate(date)}
         </div>
-    )
+    );
 };
