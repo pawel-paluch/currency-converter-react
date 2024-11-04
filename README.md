@@ -1,15 +1,23 @@
-# Currency converter
+# Currency Converter
+
 ## Description
 
-**The calculator function is to convert PLN to other currencies**.
+This application is a **simple and efficient currency converter** that converts Polish Zloty (PLN) into a variety of other currencies. Designed with a user-friendly interface, it provides up-to-date conversions based on stored data, making it easy to track currency values in real-time.
 
- The technologies used are: 
- - HTML;
- - CSS;
- - BEM;
- - JavaScript;
- - React;
- - JSX.
+### Technologies Used
+
+The project leverages a modern tech stack to ensure a smooth and responsive user experience:
+
+- **HTML**
+- **CSS**
+- **BEM**
+- **JavaScript (ES6+)**
+- **React**
+- **JSX**
+- **React Hooks**
+- **Custom React Hooks**
+- **Styled Components**
+- **localStorage**
 
 ![alt text for screen readers](src/screen.jpg "Homepage")
 
