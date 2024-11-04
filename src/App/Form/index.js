@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
-import "./style.css";
+import {
+    Button,
+    Field,
+    Header,
+    Info,
+    LabelText,
+} from "./styled";
 
 export const Form = () => {
     const [currency, setCurrency] = useState(currencies[0].short);
     const [amount, setAmount] = useState("");
-    const [result, setResult] = useState(null); 
+    const [result, setResult] = useState(null);
 
     const calculateResult = (currency, amount) => {
         const rate = currencies.find(({ short }) => short === currency)?.rate;
@@ -34,16 +40,15 @@ export const Form = () => {
     };
 
     return (
-        <form className="form" onSubmit={onSubmit}>
-            <h1 className="form__header">Przelicznik walut</h1>
+        <form onSubmit={onSubmit}>
+            <Header>Przelicznik walut</Header>
             <p>
                 <label>
-                    <span className="form__labelText">Kwota w zł*:</span>
-                    <input
+                    <LabelText>Kwota w zł*:</LabelText>
+                    <Field 
                         value={amount}
                         onChange={({ target }) => setAmount(target.value)}
                         placeholder="Wpisz kwotę w zł"
-                        className="form__field"
                         type="number"
                         required
                         step="0.01"
@@ -53,9 +58,9 @@ export const Form = () => {
             </p>
             <p>
                 <label>
-                    <span className="form__labelText">Waluta:</span>
-                    <select
-                        className="form__field"
+                    <LabelText>Waluta:</LabelText>
+                    <Field
+                        as="select"
                         value={currency}
                         onChange={({ target }) => setCurrency(target.value)}
                     >
@@ -64,17 +69,16 @@ export const Form = () => {
                                 {currency.name}
                             </option>
                         ))}
-                    </select>
+                    </Field>
                 </label>
             </p>
             <p>
-                <button className="form__button">Przelicz</button>
+                <Button>Przelicz</Button>
             </p>
-            <p className="form__info">
+            <Info>
                 Kursy pochodzą ze strony nbp.pl z dnia 03.09.2024 r
-            </p>
-            {result && <Result result={result} />}
-
+            </Info>
+            <Result result={result} />
         </form>
     );
 };
