@@ -2,7 +2,12 @@
 
 ## Description
 
-This application is a **simple and efficient currency converter** that converts Polish Zloty (PLN) into a variety of other currencies. Designed with a user-friendly interface, it provides up-to-date conversions based on stored data, making it easy to track currency values in real-time.
+This application is a **simple and efficient currency converter** that converts Polish Zloty (PLN) into a variety of other currencies. Designed with a user-friendly interface, it provides up-to-date conversions based on **real-time data from CurrencyAPI**, making it easy to track currency values accurately.
+
+### **Recent Updates:**
+- Implemented a custom React Hook `useRatesData` to fetch live currency rates from **CurrencyAPI**.
+- Refactored the `Form` component to dynamically display available currencies and handle the loading, success, and error states.
+- Removed hardcoded currency data and replaced it with real-time rates fetched from an external API.
 
 ### Technologies Used
 
@@ -15,14 +20,17 @@ The project leverages a modern tech stack to ensure a smooth and responsive user
 - **React**
 - **JSX**
 - **React Hooks**
-- **Custom React Hooks**
+- **Custom React Hooks** (e.g., `useRatesData`)
 - **Styled Components**
-- **localStorage**
+- **CurrencyAPI** (for real-time exchange rates)
 
+### **Screenshot**
 ![alt text for screen readers](src/screen.jpg "Homepage")
 
 ## Demo
 [See the project](https://pawel-paluch.github.io/currency-converter-react/)
+
+
 
 
 # Getting Started with Create React App
