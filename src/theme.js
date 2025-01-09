@@ -6,5 +6,6 @@ export const theme = {
         silver: "#ccc",
         white: "#fff",
         teal: "#008080",
+        red: "#ff0000",
     },
 };
